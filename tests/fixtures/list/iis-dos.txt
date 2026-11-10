@@ -1,0 +1,4 @@
+01-15-24  10:20AM       <DIR>          aspnet_client
+02-29-24  12:05PM                 1234 index.html
+12-31-99  11:59PM           4294967296 old backup.zip
+07-04-23  12:00AM       <DIR>          My Documents

@@ -1,0 +1,55 @@
+# Test FTP servers for tests/Integration. Start with: docker compose up -d --build --wait
+# Login for all servers: ftpuser / ftppass
+services:
+  vsftpd:
+    build: tests/docker/vsftpd
+    # vsftpd crashes as PID 1 when it reaps processes that are not its own sessions.
+    init: true
+    volumes:
+      - ./tests/docker/vsftpd/vsftpd.conf:/etc/vsftpd/test.conf:ro
+      - ./tests/docker/certs:/certs:ro
+    ports:
+      - "127.0.0.1:2121:21"
+      - "127.0.0.1:30000-30009:30000-30009"
+    healthcheck: &tcp21
+      test: ["CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/127.0.0.1/21'"]
+      interval: 2s
+      retries: 30
+
+  vsftpd-reuse:
+    build: tests/docker/vsftpd
+    init: true
+    volumes:
+      - ./tests/docker/vsftpd/vsftpd-reuse.conf:/etc/vsftpd/test.conf:ro
+      - ./tests/docker/certs:/certs:ro
+    ports:
+      - "127.0.0.1:2122:21"
+      - "127.0.0.1:30010-30019:30010-30019"
+    healthcheck: *tcp21
+
+  proftpd:
+    build: tests/docker/proftpd
+    volumes:
+      - ./tests/docker/proftpd/proftpd.conf:/etc/proftpd/test.conf:ro
+      - ./tests/docker/certs:/certs:ro
+    ports:
+      - "127.0.0.1:2123:21"
+      - "127.0.0.1:2990:990"
+      - "127.0.0.1:2124:2124"
+      - "127.0.0.1:30020-30029:30020-30029"
+    healthcheck: *tcp21
+
+  pure-ftpd:
+    build: tests/docker/pure-ftpd
+    cap_add: [SYS_NICE, DAC_READ_SEARCH]
+    ports:
+      - "127.0.0.1:2125:21"
+      - "127.0.0.1:30040-30049:30040-30049"
+    healthcheck: *tcp21
+
+networks:
+  default:
+    ipam:
+      config:
+        # Explicit subnet so the stack starts even when docker's default pools are used up.
+        - subnet: ${FTP_TEST_SUBNET:-10.211.77.0/24}

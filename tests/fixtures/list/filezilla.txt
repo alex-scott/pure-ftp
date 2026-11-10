@@ -1,0 +1,4 @@
+drwxr-xr-x 1 ftp ftp              0 Feb 28 09:15 Backups 2023
+-rw-r--r-- 1 ftp ftp         104857 Dec 31  2022 report.pdf
+-rw-r--r-- 1 ftp ftp     7516192768 Jan 02 23:59 disk image.iso
+-r--r--r-- 1 ftp ftp             17 Jun 15  2021 Ünïcødé ✓.txt

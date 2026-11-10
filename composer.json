@@ -1,0 +1,44 @@
+{
+    "name": "alex-scott/pure-ftp",
+    "description": "Single-file pure-PHP FTP/FTPS client built on core streams. No ext-ftp or ext-sockets required.",
+    "type": "library",
+    "license": "LGPL-2.1-only",
+    "keywords": [
+        "ftp",
+        "ftps",
+        "ftp client",
+        "tls",
+        "mlsd",
+        "epsv"
+    ],
+    "require": {
+        "php": ">=8.2",
+        "psr/log": "^1 || ^2 || ^3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5",
+        "phpstan/phpstan": "^2.1"
+    },
+    "suggest": {
+        "ext-openssl": "Required for FTPS (explicit or implicit TLS)"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PureFTP\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testsuite unit",
+        "test:integration": "phpunit --testsuite integration",
+        "phpstan": "phpstan analyse --memory-limit=1G"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}

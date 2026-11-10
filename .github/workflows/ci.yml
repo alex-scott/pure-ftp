@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ['8.2', '8.5']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: openssl, ftp
+          coverage: none
+
+      - run: composer install --no-interaction --no-progress
+
+      - name: PHPStan
+        run: vendor/bin/phpstan analyse --no-progress
+
+      - name: Unit tests
+        run: vendor/bin/phpunit --testsuite unit
+
+      - name: Start FTP servers
+        run: docker compose up -d --build --wait
+
+      - name: Integration tests (with ext-ftp comparison)
+        run: vendor/bin/phpunit --testsuite integration
+
+      - name: Server logs
+        if: failure()
+        run: docker compose logs
+
+  no-extensions:
+    name: No extensions beyond core + openssl (php:8.2-cli-alpine)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
+
+      - run: composer install --no-interaction --no-progress
+
+      - name: Start FTP servers
+        run: docker compose up -d --build --wait
+
+      - name: Tests in php:8.2-cli-alpine (no ftp, no sockets)
+        run: |
+          docker run --rm --network host -v "$PWD":/app -w /app php:8.2-cli-alpine sh -c '
+            set -e
+            if php -m | grep -qiE "^(ftp|sockets)$"; then echo "ftp or sockets extension present"; exit 1; fi
+            vendor/bin/phpunit
+          '
+
+      - name: Server logs
+        if: failure()
+        run: docker compose logs

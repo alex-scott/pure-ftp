@@ -1,0 +1,10 @@
+modify=20261110135512;perm=adfrw;size=9;type=OS.unix=symlink;unique=10000BU9F2878;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0777;UNIX.owner=1000;UNIX.ownername=ftpuser; link
+modify=20190304050607;perm=adfrw;size=12;type=file;unique=10000BU9F2878;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0644;UNIX.owner=1000;UNIX.ownername=ftpuser; plain.txt
+modify=20261110135512;perm=adfrw;size=2;type=file;unique=10000BU9F287B;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0644;UNIX.owner=1000;UNIX.ownername=ftpuser; юникод файл.txt
+modify=20261110135512;perm=adfrw;size=10;type=file;unique=10000BU9F2880;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0755;UNIX.owner=1000;UNIX.ownername=ftpuser; setuid.sh
+modify=20261110135512;perm=adfrw;size=2;type=file;unique=10000BU9F2879;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0644;UNIX.owner=1000;UNIX.ownername=ftpuser; name with spaces.txt
+modify=20261110135512;perm=flcdmpe;type=pdir;unique=10000BUA0334A;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0755;UNIX.owner=1000;UNIX.ownername=ftpuser; ..
+modify=20261110135512;perm=flcdmpe;type=cdir;unique=10000BU9F2872;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0755;UNIX.owner=1000;UNIX.ownername=ftpuser; .
+modify=20190304050607;perm=flcdmpe;type=dir;unique=10000BU9F2874;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0755;UNIX.owner=1000;UNIX.ownername=ftpuser; sub dir
+modify=20261110135512;perm=adfrw;size=5368709120;type=file;unique=10000BU9F287C;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=0644;UNIX.owner=1000;UNIX.ownername=ftpuser; big.bin
+modify=20261110135512;perm=flcdmpe;type=dir;unique=10000BU9F2877;UNIX.group=1000;UNIX.groupname=ftpuser;UNIX.mode=01777;UNIX.owner=1000;UNIX.ownername=ftpuser; sticky

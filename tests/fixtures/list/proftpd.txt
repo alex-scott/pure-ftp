@@ -1,0 +1,8 @@
+-rw-r--r--   1 ftpuser  ftpuser  5368709120 Nov 10 13:55 big.bin
+lrwxrwxrwx   1 ftpuser  ftpuser         9 Nov 10 13:55 link -> plain.txt
+-rw-r--r--   1 ftpuser  ftpuser         2 Nov 10 13:55 name with spaces.txt
+-rw-r--r--   1 ftpuser  ftpuser        12 Mar  4  2019 plain.txt
+-rwxr-xr-x   1 ftpuser  ftpuser        10 Nov 10 13:55 setuid.sh
+drwxrwxrwt   2 ftpuser  ftpuser      4096 Nov 10 13:55 sticky
+drwxr-xr-x   2 ftpuser  ftpuser      4096 Mar  4  2019 sub dir
+-rw-r--r--   1 ftpuser  ftpuser         2 Nov 10 13:55 юникод файл.txt

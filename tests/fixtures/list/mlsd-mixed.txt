@@ -1,0 +1,7 @@
+Size=1830;Type=file;Modify=19990929003355; welcome.msg
+TYPE=DIR;modify=20240101120000.123;PERM=el; incoming
+type=OS.unix=slink:/etc/hosts;modify=20240101120000; hosts
+unique=FE03U10001724;type=file;size=0;modify=20240515000000;unix.mode=644; semi;colon name.txt
+type=file;size=1;  leading space
+type=OS.Win=junction; junction
+type=cdir;modify=20240101120000; /pub

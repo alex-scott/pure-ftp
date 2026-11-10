@@ -1,0 +1,5 @@
+total 12
+drwxrwxrwx   1 admin    users            0 Jan 15 10:20 photo
+-rwxrwxrwx   1 admin    users      2147483648 Mar  3  2020 backup.hbk
+drwxrwxrwx+  1 admin    users            0 Aug  9 08:00 @eaDir
+-rw-rw-rw-   1 guest    users           42 Sep 30  2019 read me.txt

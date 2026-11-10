@@ -1,0 +1,8 @@
+-rw-r--r--    1 1000     1000     5368709120 Nov 10 13:55 big.bin
+lrwxrwxrwx    1 1000     1000            9 Nov 10 13:55 link -> plain.txt
+-rw-r--r--    1 1000     1000            2 Nov 10 13:55 name with spaces.txt
+-rw-r--r--    1 1000     1000           12 Mar 04  2019 plain.txt
+-rwxr-xr-x    1 1000     1000           10 Nov 10 13:55 setuid.sh
+drwxrwxrwt    2 1000     1000         4096 Nov 10 13:55 sticky
+drwxr-xr-x    2 1000     1000         4096 Mar 04  2019 sub dir
+-rw-r--r--    1 1000     1000            2 Nov 10 13:55 юникод файл.txt

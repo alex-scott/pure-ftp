@@ -1,0 +1,8 @@
+total 36
+drwxr-x---   9 cpuser   99           4096 May 12 14:22 .
+drwx--x--x  12 cpuser   cpuser       4096 May 12 14:22 ..
+-rw-r--r--   1 cpuser   cpuser        220 Feb 10  2023 .htaccess
+drwxr-x---   3 cpuser   nobody       4096 May 12 14:22 public_html
+lrwxrwxrwx   1 cpuser   cpuser         11 Feb 10  2023 www -> public_html
+-rwsr-sr-t   1 cpuser   cpuser        512 Apr  1 01:02 special
+-rw-r--r--   1 cpuser   cpuser     12345 Jun  1  2024 file -> not a link.txt

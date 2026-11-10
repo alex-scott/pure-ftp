@@ -1,0 +1,9 @@
+parameters:
+    level: max
+    paths:
+        - src
+        - tests
+    excludePaths:
+        # Untyped JSON-driven test fixture script, run as a separate process.
+        - tests/fake-server.php
+    treatPhpDocTypesAsCertain: false

@@ -1,0 +1,10 @@
+type=OS.unix=slink:;size=9;modify=20261110135512;UNIX.mode=0777;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f2897; link
+type=file;size=12;modify=20190304050607;UNIX.mode=0644;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f288d; plain.txt
+type=file;size=2;modify=20261110135512;UNIX.mode=0644;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f288f; юникод файл.txt
+type=file;size=10;modify=20261110135512;UNIX.mode=0755;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f2898; setuid.sh
+type=file;size=2;modify=20261110135512;UNIX.mode=0644;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f288e; name with spaces.txt
+type=pdir;sizd=4096;modify=20261110135512;UNIX.mode=0755;UNIX.uid=1000;UNIX.gid=1000;unique=10000ega04054; ..
+type=cdir;sizd=4096;modify=20261110135512;UNIX.mode=0755;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f2887; .
+type=dir;sizd=4096;modify=20190304050607;UNIX.mode=0755;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f2888; sub dir
+type=file;size=5368709120;modify=20261110135512;UNIX.mode=0644;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f2893; big.bin
+type=dir;sizd=4096;modify=20261110135512;UNIX.mode=01777;UNIX.uid=1000;UNIX.gid=1000;unique=10000eg9f288c; sticky
